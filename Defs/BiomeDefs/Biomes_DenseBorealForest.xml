@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BiomeDef>
+		<defName>DenseBorealForest</defName>
+		<label>dense boreal forest</label>
+		<description>An ancient, thick boreal forest with towering conifers and dense undergrowth. The heavy snowfall and abundant moisture support a rich ecosystem despite the harsh winters.</description>
+		<workerClass>BiomesRebalanceHSK.BiomeWorker_DenseBorealForest</workerClass>
+		<animalDensity>2.5</animalDensity>
+		<plantDensity>0.7</plantDensity>
+		<settlementSelectionWeight>0.9</settlementSelectionWeight>
+		<movementDifficulty>1</movementDifficulty>
+		<lakeBeachTerrain>Marsh</lakeBeachTerrain>
+		<mudTerrain>Marsh</mudTerrain>
+		<riverbankTerrain>Riverbank</riverbankTerrain>
+		<riverbankSizeRange>6~8</riverbankSizeRange>
+		<texture>World/Biomes/DenseBorealForest</texture>
+		<forageability>0.75</forageability>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlantRegrowDays>25</wildPlantRegrowDays>
+		<maxFishPopulation>500</maxFishPopulation>
+		<fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+			<freshwater_Common>
+				<Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+			</freshwater_Common>
+			<freshwater_Uncommon>
+				<Fish_Frostfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Frostfish>
+			</freshwater_Uncommon>
+			<saltwater_Common>
+				<Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+				<Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+			</saltwater_Common>
+			<saltwater_Uncommon>
+				<Fish_Dogfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Dogfish>
+			</saltwater_Uncommon>
+			<rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Cold</rareCatchesSetMaker>
+		</fishTypes>
+		<soundsAmbient>
+			<li>Ambient_NightInsects_Standard</li>
+		</soundsAmbient>
+		<diseaseMtbDays>60</diseaseMtbDays>
+		<diseases>
+			<li><diseaseInc>Disease_CommonCold</diseaseInc><commonality>100</commonality></li>
+			<li><diseaseInc>Disease_strepthroat</diseaseInc><commonality>100</commonality></li>
+			<li><diseaseInc>Disease_earache</diseaseInc><commonality>100</commonality></li>
+			<li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+			<li><diseaseInc>Disease_Plague</diseaseInc><commonality>100</commonality></li>
+			<li><diseaseInc>Disease_Fever</diseaseInc><commonality>100</commonality></li>
+			<li><diseaseInc>Disease_Measles</diseaseInc><commonality>100</commonality></li>
+			<li><diseaseInc>Disease_Ebola</diseaseInc><commonality>10</commonality></li>
+			<li><diseaseInc>Disease_Pneumonia</diseaseInc><commonality>50</commonality></li>
+			<li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+			<li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+			<li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>50</commonality></li>
+			<li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>50</commonality></li>
+			<li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+			<li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>100</commonality></li>
+			<li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+			<li><diseaseInc>Disease_Coronavirus</diseaseInc><commonality>50</commonality></li>
+		</diseases>
+		<terrainsByFertility>
+			<li><terrain>Soil</terrain><min>-999</min><max>0.87</max></li>
+			<li><terrain>SoilRich</terrain><min>0.87</min><max>999</max></li>
+		</terrainsByFertility>
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.015</perlinFrequency>
+				<thresholds>
+					<li><terrain>MossyTerrain</terrain><min>0.15</min><max>0.40</max></li>
+					<li><terrain>MarshyTerrain</terrain><min>0.40</min><max>0.60</max></li>
+					<li><terrain>WaterShallow</terrain><min>0.60</min><max>0.72</max></li>
+					<li><terrain>WaterDeep</terrain><min>0.72</min><max>1.24</max></li>
+				</thresholds>
+			</li>
+			<li>
+				<perlinFrequency>0.008</perlinFrequency>
+				<thresholds>
+					<li><terrain>MossyTerrain</terrain><min>0.10</min><max>0.25</max></li>
+					<li><terrain>SoilRich</terrain><min>0.25</min><max>0.37</max></li>
+				</thresholds>
+			</li>
+			<li>
+				<perlinFrequency>0.01</perlinFrequency>
+				<thresholds>
+					<li><terrain>MarshyTerrain</terrain><min>0.15</min><max>0.25</max></li>
+					<li><terrain>Marsh</terrain><min>0.25</min><max>0.30</max></li>
+				</thresholds>
+			</li>
+		</terrainPatchMakers>
+		<baseWeatherCommonalities>
+			<Clear>18</Clear>
+			<Fog>1</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>1</DryThunderstorm>
+			<RainyThunderstorm>1</RainyThunderstorm>
+			<FoggyRain>1</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+			<GrayPall MayRequire="Ludeon.RimWorld.Anomaly">1</GrayPall>
+			<Rainstorm>1</Rainstorm>
+			<Blizzard>4</Blizzard>
+			<Whiteout>3</Whiteout>
+			<Hurricane>1</Hurricane>
+		</baseWeatherCommonalities>
+		<!-- HSK BorealForest original values -->
+		<wildPlants>
+			<Plant_Mushroom>0.15</Plant_Mushroom>
+			<Plant_Berry>0.35</Plant_Berry>
+			<Plant_Bush>1.0</Plant_Bush>
+			<Plant_Healroot>0.06</Plant_Healroot>
+			<Plant_Rhododendron>0.25</Plant_Rhododendron>
+			<Plant_Grass>3.4</Plant_Grass>
+			<Plant_Moss>3.8</Plant_Moss>
+			<Plant_Hypericum>0.02</Plant_Hypericum>
+			<Plant_Mint>0.04</Plant_Mint>
+			<Plant_Venus>0.5</Plant_Venus>
+			<Plant_WhiteRose>0.15</Plant_WhiteRose>
+			<Plant_WildRose>0.02</Plant_WildRose>
+			<Plant_Dandelion>0.5</Plant_Dandelion>
+			<Plant_Daylily>0.3</Plant_Daylily>
+			<Plant_Astragalus>0.35</Plant_Astragalus>
+			<Plant_Crocus>0.2</Plant_Crocus>
+			<Plant_TreePoplar>0.1</Plant_TreePoplar>
+			<Plant_TreePine>8.0</Plant_TreePine>
+			<Plant_TreeBirch>1.3</Plant_TreeBirch>
+			<Plant_Mushroom_Blue>0.22</Plant_Mushroom_Blue>
+			<Plant_Mushroom_Red>0.17</Plant_Mushroom_Red>
+			<Plant_TreeMaple>0.2</Plant_TreeMaple>
+			<Plant_TreeWillow>0.28</Plant_TreeWillow>
+			<PlantTreeRedwood>0.11</PlantTreeRedwood>
+			<Plant_Tinctoria>0.0075</Plant_Tinctoria>
+			<Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">4</Plant_Ripthorn>
+			<Plant_TreeGrayPine MayRequire="Ludeon.RimWorld.Biotech">12</Plant_TreeGrayPine>
+			<Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">4.0</Plant_GrayGrass>
+		</wildPlants>
+		<!-- HSK BorealForest original values -->
+		<wildAnimals>
+			<Elk>0.4</Elk>
+			<Ibex>0.3</Ibex>
+			<Caribou>0.4</Caribou>
+			<Muffalo>0.6</Muffalo>
+			<Squirrel>1</Squirrel>
+			<WildBoar>0.3</WildBoar>
+			<Hare>0.7</Hare>
+			<Husky>0.01</Husky>
+			<Turkey>0.2</Turkey>
+			<Rat>0.8</Rat>
+			<Megasloth>0.03</Megasloth>
+			<Raccoon>0.4</Raccoon>
+			<Warg>0.02</Warg>
+			<Bear_Grizzly>0.03</Bear_Grizzly>
+			<Rhino_Wooly>0.05</Rhino_Wooly>
+			<Cougar>0.02</Cougar>
+			<Lynx>0.02</Lynx>
+			<Wolf_Timber>0.14</Wolf_Timber>
+			<Wolf_Arctic>0.03</Wolf_Arctic>
+			<Fox_Arctic>0.04</Fox_Arctic>
+			<Fox_Red>0.04</Fox_Red>
+			<Fishercat>0.15</Fishercat>
+			<Ermine>0.07</Ermine>
+			<Megabadger>0.02</Megabadger>
+			<Yak>0.12</Yak>
+			<Horse>0.06</Horse>
+			<Horse_Wooly>0.07</Horse_Wooly>
+			<Chipmunk>0.7</Chipmunk>
+			<Crashbug>0.7</Crashbug>
+			<Ptarmigan>0.6</Ptarmigan>
+			<Rimwolf>0.1</Rimwolf>
+			<Terramorph>0.05</Terramorph>
+			<Sheep>0.4</Sheep>
+			<SmilodonPop>0.04</SmilodonPop>
+			<Fly>1.1</Fly>
+			<Mosquito>1.8</Mosquito>
+			<Buffalo>0.2</Buffalo>
+			<WhiteTiger>0.08</WhiteTiger>
+			<SnowLeopard>0.07</SnowLeopard>
+			<Mammoth>0.07</Mammoth>
+			<Cockroach>0.1</Cockroach>
+		</wildAnimals>
+		<pollutionWildAnimals MayRequire="Ludeon.RimWorld.Biotech">
+			<WasteRat MayRequire="Ludeon.RimWorld.Biotech">1</WasteRat>
+			<Rat>0.5</Rat>
+			<Raccoon>0.25</Raccoon>
+			<Warg>0.05</Warg>
+			<Crashbug>0.8</Crashbug>
+			<Cockroach>0.6</Cockroach>
+		</pollutionWildAnimals>
+		<allowedPackAnimals>
+			<li>Muffalo</li>
+			<li>Horse</li>
+			<li>Horse_Wooly</li>
+			<li>Megabadger</li>
+			<li>Bear_Grizzly</li>
+			<li>Rhino_Wooly</li>
+			<li>Buffalo</li>
+			<li>Mammoth</li>
+		</allowedPackAnimals>
+	</BiomeDef>
+
+</Defs>

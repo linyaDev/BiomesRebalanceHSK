@@ -11,11 +11,17 @@
 	<description>
 [English]
 Adds new biome variants for Hardcore SK modpack.
-- Dense Temperate Forest: A thicker variant of the temperate forest with higher tree density, more wildlife, and richer soil. Appears in regions with high rainfall.
+- Dense Temperate Forest: A thicker variant of the temperate forest with higher tree density, more wildlife, and richer soil. Appears in regions with high rainfall (1300+).
+- Dense Boreal Forest: An ancient, thick boreal forest with towering conifers and dense undergrowth. Appears in cold wet regions (rainfall 1300+, temp -10 to +5).
+
+Also reduces plant/animal density in vanilla Temperate Forest and Boreal Forest to create contrast with dense variants.
 
 [Russian]
 Добавляет новые варианты биомов для модпака Hardcore SK.
-- Густой умеренный лес: более плотный вариант умеренного леса с повышенной плотностью деревьев, большим количеством животных и более богатой почвой. Появляется в регионах с высокой влажностью.
+- Густой умеренный лес: более плотный вариант умеренного леса с повышенной плотностью деревьев, большим количеством животных и более богатой почвой. Появляется в регионах с высокой влажностью (1300+).
+- Густая тайга: древняя, густая тайга с высокими хвойными деревьями и плотным подлеском. Появляется в холодных влажных регионах (осадки 1300+, температура от -10 до +5).
+
+Также уменьшает плотность растений и животных в обычных умеренном лесу и тайге для контраста с густыми вариантами.
 	</description>
 	<modDependencies>
 	</modDependencies>
