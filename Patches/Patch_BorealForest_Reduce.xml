@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<!-- Reduce BorealForest: trees (-70%) and animals (-20%) only -->
-	<!-- Non-tree plants remain at HSK values -->
-	<!-- Dense variant carries the original HSK values for everything -->
+	<!-- Reduce BorealForest: plantDensity halved, trees -70%, animals -20% -->
+	<!-- Non-tree plants multiplied by 2.0 (=0.7/0.35) to compensate for plantDensity drop -->
+	<!-- Dense variant carries the original HSK values -->
 
 	<!-- animalDensity: 2.5 -> 2.0 (-20%) -->
 	<Operation Class="PatchOperationReplace">
@@ -11,7 +11,13 @@
 		<value><animalDensity>2.0</animalDensity></value>
 	</Operation>
 
-	<!-- Trees (-70%) -->
+	<!-- plantDensity: 0.7 -> 0.525 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/plantDensity</xpath>
+		<value><plantDensity>0.525</plantDensity></value>
+	</Operation>
+
+	<!-- === Trees (-70% weights, compounded by plantDensity /2) === -->
 	<!-- TreePine: 8.0 -> 2.4 -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_TreePine</xpath>
@@ -38,7 +44,104 @@
 		<value><Plant_TreeWillow>0.084</Plant_TreeWillow></value>
 	</Operation>
 
-	<!-- Animals (-20%) -->
+	<!-- === Non-tree plants (x2.0 to compensate plantDensity /2) === -->
+	<!-- Grass: 3.4 -> 6.8 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Grass</xpath>
+		<value><Plant_Grass>6.8</Plant_Grass></value>
+	</Operation>
+	<!-- Moss: 3.8 -> 7.6 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Moss</xpath>
+		<value><Plant_Moss>7.6</Plant_Moss></value>
+	</Operation>
+	<!-- Bush: 1.0 -> 2.0 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Bush</xpath>
+		<value><Plant_Bush>2.0</Plant_Bush></value>
+	</Operation>
+	<!-- Venus: 0.5 -> 1.0 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Venus</xpath>
+		<value><Plant_Venus>1.0</Plant_Venus></value>
+	</Operation>
+	<!-- Dandelion: 0.5 -> 1.0 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Dandelion</xpath>
+		<value><Plant_Dandelion>1.0</Plant_Dandelion></value>
+	</Operation>
+	<!-- Berry: 0.35 -> 0.7 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Berry</xpath>
+		<value><Plant_Berry>0.7</Plant_Berry></value>
+	</Operation>
+	<!-- Astragalus: 0.35 -> 0.7 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Astragalus</xpath>
+		<value><Plant_Astragalus>0.7</Plant_Astragalus></value>
+	</Operation>
+	<!-- Daylily: 0.3 -> 0.6 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Daylily</xpath>
+		<value><Plant_Daylily>0.6</Plant_Daylily></value>
+	</Operation>
+	<!-- Rhododendron: 0.25 -> 0.5 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Rhododendron</xpath>
+		<value><Plant_Rhododendron>0.5</Plant_Rhododendron></value>
+	</Operation>
+	<!-- Mushroom_Blue: 0.22 -> 0.44 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Mushroom_Blue</xpath>
+		<value><Plant_Mushroom_Blue>0.44</Plant_Mushroom_Blue></value>
+	</Operation>
+	<!-- Crocus: 0.2 -> 0.4 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Crocus</xpath>
+		<value><Plant_Crocus>0.4</Plant_Crocus></value>
+	</Operation>
+	<!-- Mushroom_Red: 0.17 -> 0.34 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Mushroom_Red</xpath>
+		<value><Plant_Mushroom_Red>0.34</Plant_Mushroom_Red></value>
+	</Operation>
+	<!-- Mushroom: 0.15 -> 0.3 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Mushroom</xpath>
+		<value><Plant_Mushroom>0.3</Plant_Mushroom></value>
+	</Operation>
+	<!-- WhiteRose: 0.15 -> 0.3 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_WhiteRose</xpath>
+		<value><Plant_WhiteRose>0.3</Plant_WhiteRose></value>
+	</Operation>
+	<!-- Healroot: 0.06 -> 0.12 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Healroot</xpath>
+		<value><Plant_Healroot>0.12</Plant_Healroot></value>
+	</Operation>
+	<!-- Mint: 0.04 -> 0.08 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Mint</xpath>
+		<value><Plant_Mint>0.08</Plant_Mint></value>
+	</Operation>
+	<!-- Hypericum: 0.02 -> 0.04 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Hypericum</xpath>
+		<value><Plant_Hypericum>0.04</Plant_Hypericum></value>
+	</Operation>
+	<!-- WildRose: 0.02 -> 0.04 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_WildRose</xpath>
+		<value><Plant_WildRose>0.04</Plant_WildRose></value>
+	</Operation>
+	<!-- Tinctoria: 0.0075 -> 0.015 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/Plant_Tinctoria</xpath>
+		<value><Plant_Tinctoria>0.015</Plant_Tinctoria></value>
+	</Operation>
+
+	<!-- === Animals (-20%) === -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals/Elk</xpath>
 		<value><Elk>0.32</Elk></value>
