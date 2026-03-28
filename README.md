@@ -2,7 +2,7 @@
 
 ## English
 
-A RimWorld mod for the Hardcore SK modpack that adds new biome variants to diversify world generation.
+A RimWorld mod for the Hardcore SK modpack that adds new biome variants to diversify world generation. Reduces trees and animals in standard biomes while dense variants keep original HSK values. Non-tree plants (grass, bushes, flowers, etc.) remain unchanged.
 
 ### New Biomes
 
@@ -13,6 +13,7 @@ A RimWorld mod for the Hardcore SK modpack that adds new biome variants to diver
 ### Features
 - Custom `BiomeWorker` with rainfall-based distribution
 - Balanced to coexist with vanilla and HSK biomes
+- Only trees and animals are reduced — all other plants at HSK values
 - Full English and Russian localization
 - Custom world map textures
 
@@ -21,12 +22,12 @@ A RimWorld mod for the Hardcore SK modpack that adds new biome variants to diver
 | Parameter | HSK Original | Temperate (patched) | Dense Forest |
 |---|---|---|---|
 | animalDensity | 3.3 | **1.61** (-51%) | 3.3 |
-| plantDensity | 0.65 | **0.23** (-65%) | 0.65 |
-| wildPlantRegrowDays | 20 | **45** (+125%) | 20 |
+| plantDensity | 0.65 | 0.65 | 0.65 |
+| Non-tree plants | HSK | HSK (unchanged) | HSK |
 
 | Trees | Original | Temperate | Dense |
 |---|---|---|---|
-| Poplar | 3.5 | **1.23** | 3.5 |
+| Poplar | 3.5 | **1.23** (-65%) | 3.5 |
 | Birch | 1.5 | **0.53** | 1.5 |
 | Cypress | 1.4 | **0.49** | 1.4 |
 | Willow | 1.2 | **0.42** | 1.2 |
@@ -48,18 +49,19 @@ A RimWorld mod for the Hardcore SK modpack that adds new biome variants to diver
 | Parameter | HSK Original | Boreal (patched) | Dense Boreal |
 |---|---|---|---|
 | animalDensity | 2.5 | **2.0** (-20%) | 2.5 |
-| plantDensity | 0.7 | **0.21** (-70%) | 0.7 |
+| plantDensity | 0.7 | 0.7 | 0.7 |
+| Non-tree plants | HSK | HSK (unchanged) | HSK |
 
 | Trees | Original | Boreal | Dense |
 |---|---|---|---|
-| Pine | 8.0 | **2.4** | 8.0 |
+| Pine | 8.0 | **2.4** (-70%) | 8.0 |
 | Birch | 1.3 | **0.39** | 1.3 |
 | Willow | 0.28 | **0.084** | 0.28 |
 | Maple | 0.2 | **0.06** | 0.2 |
 
 | Animals | Original | Boreal | Dense |
 |---|---|---|---|
-| Mosquito | 1.8 | **1.44** | 1.8 |
+| Mosquito | 1.8 | **1.44** (-20%) | 1.8 |
 | Fly | 1.1 | **0.88** | 1.1 |
 | Squirrel | 1.0 | **0.8** | 1.0 |
 | Muffalo | 0.6 | **0.48** | 0.6 |
@@ -75,7 +77,7 @@ A RimWorld mod for the Hardcore SK modpack that adds new biome variants to diver
 
 ## Русский
 
-Мод для RimWorld и модпака Hardcore SK, добавляющий новые варианты биомов для разнообразия генерации мира.
+Мод для RimWorld и модпака Hardcore SK, добавляющий новые варианты биомов для разнообразия генерации мира. Уменьшает деревья и животных в обычных биомах, а густые варианты сохраняют оригинальные значения HSK. Прочая растительность (трава, кусты, цветы и т.д.) не изменена.
 
 ### Новые биомы
 
@@ -86,44 +88,21 @@ A RimWorld mod for the Hardcore SK modpack that adds new biome variants to diver
 ### Особенности
 - Собственный `BiomeWorker` с распределением на основе осадков
 - Сбалансирован для сосуществования с ванильными и HSK биомами
+- Уменьшены только деревья и животные — остальные растения на уровне HSK
 - Полная локализация на английский и русский языки
 - Собственные текстуры на карте мира
-
-### Баланс: Тайга vs Густая тайга
-
-| Параметр | Оригинал HSK | Тайга (патч) | Густая тайга |
-|---|---|---|---|
-| Плотность животных | 2.5 | **2.0** (-20%) | 2.5 |
-| Плотность растений | 0.7 | **0.21** (-70%) | 0.7 |
-
-| Деревья | Оригинал | Тайга | Густая |
-|---|---|---|---|
-| Сосна | 8.0 | **2.4** | 8.0 |
-| Берёза | 1.3 | **0.39** | 1.3 |
-| Ива | 0.28 | **0.084** | 0.28 |
-| Клён | 0.2 | **0.06** | 0.2 |
-
-| Животные | Оригинал | Тайга | Густая |
-|---|---|---|---|
-| Комар | 1.8 | **1.44** | 1.8 |
-| Муха | 1.1 | **0.88** | 1.1 |
-| Белка | 1.0 | **0.8** | 1.0 |
-| Муффало | 0.6 | **0.48** | 0.6 |
-| Лось | 0.4 | **0.32** | 0.4 |
-| Карибу | 0.4 | **0.32** | 0.4 |
-| Волк | 0.14 | **0.112** | 0.14 |
 
 ### Баланс: Умеренный лес vs Густой умеренный лес
 
 | Параметр | Оригинал HSK | Умеренный (патч) | Густой лес |
 |---|---|---|---|
 | Плотность животных | 3.3 | **1.61** (-51%) | 3.3 |
-| Плотность растений | 0.65 | **0.23** (-65%) | 0.65 |
-| Дни отрастания | 20 | **45** (+125%) | 20 |
+| Плотность растений | 0.65 | 0.65 | 0.65 |
+| Прочие растения | HSK | HSK (без изменений) | HSK |
 
 | Деревья | Оригинал | Умеренный | Густой |
 |---|---|---|---|
-| Тополь | 3.5 | **1.23** | 3.5 |
+| Тополь | 3.5 | **1.23** (-65%) | 3.5 |
 | Берёза | 1.5 | **0.53** | 1.5 |
 | Кипарис | 1.4 | **0.49** | 1.4 |
 | Ива | 1.2 | **0.42** | 1.2 |
@@ -139,6 +118,31 @@ A RimWorld mod for the Hardcore SK modpack that adds new biome variants to diver
 | Кабан | 0.6 | **0.29** | 0.6 |
 | Волк | 0.08 | **0.039** | 0.08 |
 | Медведь | 0.06 | **0.029** | 0.06 |
+
+### Баланс: Тайга vs Густая тайга
+
+| Параметр | Оригинал HSK | Тайга (патч) | Густая тайга |
+|---|---|---|---|
+| Плотность животных | 2.5 | **2.0** (-20%) | 2.5 |
+| Плотность растений | 0.7 | 0.7 | 0.7 |
+| Прочие растения | HSK | HSK (без изменений) | HSK |
+
+| Деревья | Оригинал | Тайга | Густая |
+|---|---|---|---|
+| Сосна | 8.0 | **2.4** (-70%) | 8.0 |
+| Берёза | 1.3 | **0.39** | 1.3 |
+| Ива | 0.28 | **0.084** | 0.28 |
+| Клён | 0.2 | **0.06** | 0.2 |
+
+| Животные | Оригинал | Тайга | Густая |
+|---|---|---|---|
+| Комар | 1.8 | **1.44** (-20%) | 1.8 |
+| Муха | 1.1 | **0.88** | 1.1 |
+| Белка | 1.0 | **0.8** | 1.0 |
+| Муффало | 0.6 | **0.48** | 0.6 |
+| Лось | 0.4 | **0.32** | 0.4 |
+| Карибу | 0.4 | **0.32** | 0.4 |
+| Волк | 0.14 | **0.112** | 0.14 |
 
 ### Требования
 - RimWorld 1.5 / 1.6
