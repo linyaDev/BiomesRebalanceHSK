@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Reduce TemperateForest: plants /2 then -30%, animals ~30% then -30% -->
+	<!-- Dense variant carries the original HSK values -->
+
+	<!-- animalDensity: 3.3 -> 1.61 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/animalDensity</xpath>
+		<value><animalDensity>1.61</animalDensity></value>
+	</Operation>
+
+	<!-- plantDensity: 0.65 -> 0.23 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/plantDensity</xpath>
+		<value><plantDensity>0.23</plantDensity></value>
+	</Operation>
+
+	<!-- wildPlantRegrowDays: 20 -> 45 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlantRegrowDays</xpath>
+		<value><wildPlantRegrowDays>45</wildPlantRegrowDays></value>
+	</Operation>
+
+	<!-- Trees -->
+	<!-- TreePoplar: 3.5 -> 1.23 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_TreePoplar</xpath>
+		<value><Plant_TreePoplar>1.23</Plant_TreePoplar></value>
+	</Operation>
+	<!-- TreeBirch: 1.5 -> 0.53 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_TreeBirch</xpath>
+		<value><Plant_TreeBirch>0.53</Plant_TreeBirch></value>
+	</Operation>
+	<!-- TreeCypress: 1.4 -> 0.49 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_TreeCypress</xpath>
+		<value><Plant_TreeCypress>0.49</Plant_TreeCypress></value>
+	</Operation>
+	<!-- TreeWillow: 1.2 -> 0.42 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_TreeWillow</xpath>
+		<value><Plant_TreeWillow>0.42</Plant_TreeWillow></value>
+	</Operation>
+	<!-- TreeMaple: 0.8 -> 0.28 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_TreeMaple</xpath>
+		<value><Plant_TreeMaple>0.28</Plant_TreeMaple></value>
+	</Operation>
+	<!-- TreeTeak: 0.6 -> 0.21 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_TreeTeak</xpath>
+		<value><Plant_TreeTeak>0.21</Plant_TreeTeak></value>
+	</Operation>
+	<!-- TreeOak: 0.45 -> 0.16 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_TreeOak</xpath>
+		<value><Plant_TreeOak>0.16</Plant_TreeOak></value>
+	</Operation>
+	<!-- TreeApple: 0.16 -> 0.056 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_TreeApple</xpath>
+		<value><Plant_TreeApple>0.056</Plant_TreeApple></value>
+	</Operation>
+	<!-- TreePeach: 0.08 -> 0.028 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_TreePeach</xpath>
+		<value><Plant_TreePeach>0.028</Plant_TreePeach></value>
+	</Operation>
+	<!-- TreeGrape: 0.1 -> 0.035 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_TreeGrape</xpath>
+		<value><Plant_TreeGrape>0.035</Plant_TreeGrape></value>
+	</Operation>
+
+	<!-- Bushes/undergrowth -->
+	<!-- Bush: 1.8 -> 0.63 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Bush</xpath>
+		<value><Plant_Bush>0.63</Plant_Bush></value>
+	</Operation>
+	<!-- Brambles: 0.4 -> 0.14 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Brambles</xpath>
+		<value><Plant_Brambles>0.14</Plant_Brambles></value>
+	</Operation>
+	<!-- TallGrass: 1.9 -> 0.67 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_TallGrass</xpath>
+		<value><Plant_TallGrass>0.67</Plant_TallGrass></value>
+	</Operation>
+	<!-- Grass: 3.2 -> 1.12 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Grass</xpath>
+		<value><Plant_Grass>1.12</Plant_Grass></value>
+	</Operation>
+	<!-- Rhododendron: 0.4 -> 0.14 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Rhododendron</xpath>
+		<value><Plant_Rhododendron>0.14</Plant_Rhododendron></value>
+	</Operation>
+	<!-- Daylily: 0.3 -> 0.11 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Daylily</xpath>
+		<value><Plant_Daylily>0.11</Plant_Daylily></value>
+	</Operation>
+	<!-- Astragalus: 0.4 -> 0.14 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Astragalus</xpath>
+		<value><Plant_Astragalus>0.14</Plant_Astragalus></value>
+	</Operation>
+	<!-- Dandelion: 0.45 -> 0.16 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Dandelion</xpath>
+		<value><Plant_Dandelion>0.16</Plant_Dandelion></value>
+	</Operation>
+	<!-- Venus: 0.2 -> 0.07 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Venus</xpath>
+		<value><Plant_Venus>0.07</Plant_Venus></value>
+	</Operation>
+	<!-- Crocus: 0.3 -> 0.11 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Crocus</xpath>
+		<value><Plant_Crocus>0.11</Plant_Crocus></value>
+	</Operation>
+	<!-- Mushrooms -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Mushroom_Blue</xpath>
+		<value><Plant_Mushroom_Blue>0.042</Plant_Mushroom_Blue></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Mushroom_Red</xpath>
+		<value><Plant_Mushroom_Red>0.035</Plant_Mushroom_Red></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Mushroom</xpath>
+		<value><Plant_Mushroom>0.035</Plant_Mushroom></value>
+	</Operation>
+
+	<!-- Food plants -->
+	<!-- Berry: 0.15 -> 0.053 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Berry</xpath>
+		<value><Plant_Berry>0.053</Plant_Berry></value>
+	</Operation>
+	<!-- Potato: 0.07 -> 0.025 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Potato</xpath>
+		<value><Plant_Potato>0.025</Plant_Potato></value>
+	</Operation>
+	<!-- HealrootWild: 0.1 -> 0.035 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_HealrootWild</xpath>
+		<value><Plant_HealrootWild>0.035</Plant_HealrootWild></value>
+	</Operation>
+	<!-- Flax: 0.1 -> 0.035 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/Plant_Flax</xpath>
+		<value><Plant_Flax>0.035</Plant_Flax></value>
+	</Operation>
+
+	<!-- Animals -30% from previous values -->
+	<!-- Deer: 0.39 -> 0.27 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Deer</xpath>
+		<value><Deer>0.27</Deer></value>
+	</Operation>
+	<!-- Hare: 0.7 -> 0.49 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Hare</xpath>
+		<value><Hare>0.49</Hare></value>
+	</Operation>
+	<!-- Squirrel: 0.7 -> 0.49 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Squirrel</xpath>
+		<value><Squirrel>0.49</Squirrel></value>
+	</Operation>
+	<!-- Rat: 0.56 -> 0.39 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Rat</xpath>
+		<value><Rat>0.39</Rat></value>
+	</Operation>
+	<!-- WildBoar: 0.42 -> 0.29 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/WildBoar</xpath>
+		<value><WildBoar>0.29</WildBoar></value>
+	</Operation>
+	<!-- Turkey: 0.35 -> 0.25 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Turkey</xpath>
+		<value><Turkey>0.25</Turkey></value>
+	</Operation>
+	<!-- Raccoon: 0.32 -> 0.22 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Raccoon</xpath>
+		<value><Raccoon>0.22</Raccoon></value>
+	</Operation>
+	<!-- Muffalo: 0.32 -> 0.22 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Muffalo</xpath>
+		<value><Muffalo>0.22</Muffalo></value>
+	</Operation>
+	<!-- Ibex: 0.25 -> 0.18 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Ibex</xpath>
+		<value><Ibex>0.18</Ibex></value>
+	</Operation>
+	<!-- Chipmunk: 0.56 -> 0.39 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Chipmunk</xpath>
+		<value><Chipmunk>0.39</Chipmunk></value>
+	</Operation>
+	<!-- Crashbug: 0.84 -> 0.59 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Crashbug</xpath>
+		<value><Crashbug>0.59</Crashbug></value>
+	</Operation>
+	<!-- Fly: 0.77 -> 0.54 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Fly</xpath>
+		<value><Fly>0.54</Fly></value>
+	</Operation>
+	<!-- Mosquito: 0.77 -> 0.54 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Mosquito</xpath>
+		<value><Mosquito>0.54</Mosquito></value>
+	</Operation>
+	<!-- Sheep: 0.25 -> 0.18 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Sheep</xpath>
+		<value><Sheep>0.18</Sheep></value>
+	</Operation>
+	<!-- Wolf_Timber: 0.056 -> 0.039 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Wolf_Timber</xpath>
+		<value><Wolf_Timber>0.039</Wolf_Timber></value>
+	</Operation>
+	<!-- Bear_Grizzly: 0.042 -> 0.029 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Bear_Grizzly</xpath>
+		<value><Bear_Grizzly>0.029</Bear_Grizzly></value>
+	</Operation>
+	<!-- Tiger: 0.042 -> 0.029 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Tiger</xpath>
+		<value><Tiger>0.029</Tiger></value>
+	</Operation>
+	<!-- Buffalo: 0.14 -> 0.098 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Buffalo</xpath>
+		<value><Buffalo>0.098</Buffalo></value>
+	</Operation>
+	<!-- Duck: 0.21 -> 0.15 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals/Duck</xpath>
+		<value><Duck>0.15</Duck></value>
+	</Operation>
+
+</Patch>

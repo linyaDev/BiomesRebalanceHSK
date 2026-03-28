@@ -1,0 +1,8 @@
+## Build artifacts
+Source/**/obj/
+Source/**/bin/
+*.user
+*.suo
+
+## Debug symbols
+*.pdb

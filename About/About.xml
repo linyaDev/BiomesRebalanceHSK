@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>BiomesRebalanceHSK</name>
+	<author>HSK Team</author>
+	<url>https://github.com/skyarkhangel/Hardcore-SK</url>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<packageId>hsk.biomesrebalance</packageId>
+	<description>
+[English]
+Adds new biome variants for Hardcore SK modpack.
+- Dense Temperate Forest: A thicker variant of the temperate forest with higher tree density, more wildlife, and richer soil. Appears in regions with high rainfall.
+
+[Russian]
+Добавляет новые варианты биомов для модпака Hardcore SK.
+- Густой умеренный лес: более плотный вариант умеренного леса с повышенной плотностью деревьев, большим количеством животных и более богатой почвой. Появляется в регионах с высокой влажностью.
+	</description>
+	<modDependencies>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>skyarkhangel.HSK</li>
+	</loadAfter>
+</ModMetaData>
