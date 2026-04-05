@@ -5,7 +5,11 @@ namespace BiomesRebalanceHSK
 {
     public class BiomeWorker_DenseTemperateForest : BiomeWorker
     {
+#if V15
+        public override float GetScore(Tile tile, int tileID)
+#else
         public override float GetScore(BiomeDef biome, Tile tile, PlanetTile planetTile)
+#endif
         {
             if (tile.WaterCovered)
             {
